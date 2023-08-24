@@ -2,3 +2,22 @@ Thu 24 Aug 2023 08:00:55 PM UTC:
  tests:  0|6
 total_score: 0/70
 11a2449
+Thu 24 Aug 2023 08:02:46 PM UTC: 
+ list.c | 111 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 103 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+list.c:167:8: error: redefinition of ‘popCurrent’
+  167 | void * popCurrent(List * list) {
+      |        ^~~~~~~~~~
+list.c:101:7: note: previous definition of ‘popCurrent’ with type ‘void *(List *)’
+  101 | void *popCurrent(List *list) {
+      |       ^~~~~~~~~~
+test.c:448:5: error: redefinition of ‘main’
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:132:5: note: previous definition of ‘main’ with type ‘int()’
+  132 | int main() {
+      |     ^~~~
+Compilation failed
+5838a57
