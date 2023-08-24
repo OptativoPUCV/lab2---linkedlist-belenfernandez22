@@ -21,3 +21,22 @@ list.c:132:5: note: previous definition of ‘main’ with type ‘int()’
       |     ^~~~
 Compilation failed
 5838a57
+Thu 24 Aug 2023 08:09:10 PM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c:167:8: error: redefinition of ‘popCurrent’
+  167 | void * popCurrent(List * list) {
+      |        ^~~~~~~~~~
+list.c:101:7: note: previous definition of ‘popCurrent’ with type ‘void *(List *)’ {aka ‘void *(struct List *)’}
+  101 | void *popCurrent(List *list) {
+      |       ^~~~~~~~~~
+test.c:448:5: error: redefinition of ‘main’
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:132:5: note: previous definition of ‘main’ with type ‘int()’
+  132 | int main() {
+      |     ^~~~
+Compilation failed
+ca4235d

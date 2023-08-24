@@ -1,7 +1,7 @@
-#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <assert.h>
+#include "list.h"
 typedef struct Node Node;
 
 struct Node {
