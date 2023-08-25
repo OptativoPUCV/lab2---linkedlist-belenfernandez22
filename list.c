@@ -125,8 +125,27 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+    if (!list || !list->current) {
+        fprintf(stderr, "Error: Current node is NULL.\n");
+        return NULL;
+    }
+
+    void * data = list->current->data;
+
+    if (list->current->prev) list->current->prev->next = list->current->next;
+    else list->head = list->current->next;
+
+    if (list->current->next) list->current->next->prev = list->current->prev;
+    else list->tail = list->current->prev;
+
+    Node * toDelete = list->current;
+    list->current = list->current->next;
+    free(toDelete);
+
+    return data;
 }
+
+
 
 void cleanList(List * list) {
     while (list->head != NULL) {
