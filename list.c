@@ -93,9 +93,26 @@ void pushBack(List * list, void * data) {
     list->current = list->tail;
     pushCurrent(list,data);
 }
-
 void pushCurrent(List * list, void * data) {
+    if (list->current == NULL) {
+        fprintf(stderr, "Error: Current node is NULL.\n");
+        return;
+    }
+
+    Node * newNode = createNode(data);
+
+    newNode->prev = list->current;
+    newNode->next = list->current->next;
+
+    if (list->current->next != NULL) {
+        list->current->next->prev = newNode;
+    } else {
+        list->tail = newNode;
+    }
+
+    list->current->next = newNode;
 }
+
 
 void * popFront(List * list) {
     list->current = list->head;
