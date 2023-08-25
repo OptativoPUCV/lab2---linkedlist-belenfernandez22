@@ -40,3 +40,30 @@ list.c:132:5: note: previous definition of ‘main’ with type ‘int()’
       |     ^~~~
 Compilation failed
 ca4235d
+Fri 25 Aug 2023 12:21:50 AM UTC: 
+ list.c | 145 +++--------------------------------------------------------------
+ 1 file changed, 6 insertions(+), 139 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccb28jwk.o: in function `test_last_prev':
+test.c:(.text+0x2ef): undefined reference to `lastList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x35f): undefined reference to `prevList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x417): undefined reference to `prevList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x47c): undefined reference to `prevList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccb28jwk.o: in function `test_pushfront':
+test.c:(.text+0x548): undefined reference to `pushFront'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x5ea): undefined reference to `pushFront'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccb28jwk.o: in function `test_pushcurrent':
+test.c:(.text+0x734): undefined reference to `pushCurrent'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x789): undefined reference to `pushCurrent'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccb28jwk.o: in function `test_popcurrent':
+test.c:(.text+0x8d9): undefined reference to `popCurrent'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x957): undefined reference to `popCurrent'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x9bb): undefined reference to `popCurrent'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccb28jwk.o: in function `test_first_next':
+test.c:(.text+0xb47): undefined reference to `firstList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0xba6): undefined reference to `firstList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0xbf9): undefined reference to `nextList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0xc54): undefined reference to `nextList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0xc85): undefined reference to `nextList'
+collect2: error: ld returned 1 exit status
+Compilation failed
+afd02c6
