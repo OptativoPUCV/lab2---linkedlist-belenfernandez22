@@ -67,3 +67,9 @@ test.c:(.text+0xb47): undefined reference to `firstList'
 collect2: error: ld returned 1 exit status
 Compilation failed
 afd02c6
+Fri 25 Aug 2023 12:29:21 AM UTC: 
+ list.c | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 47 insertions(+)
+ tests:  1|5
+total_score: 10/70
+2a39a2a
