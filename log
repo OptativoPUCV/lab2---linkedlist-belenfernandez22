@@ -199,3 +199,18 @@ Sat 26 Aug 2023 02:43:23 AM UTC:
  tests:  12|0
 total_score: 70/70
 cfd0b25
+Sat 26 Aug 2023 02:45:17 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createNode’:
+list.c:22:23: error: implicit declaration of function ‘callloc’; did you mean ‘calloc’? [-Werror=implicit-function-declaration]
+   22 |   Node *new = (Node *)callloc(sizeof(Node));
+      |                       ^~~~~~~
+      |                       calloc
+list.c:22:15: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   22 |   Node *new = (Node *)callloc(sizeof(Node));
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+7b41b02
