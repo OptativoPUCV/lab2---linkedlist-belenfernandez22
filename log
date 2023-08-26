@@ -214,3 +214,18 @@ list.c:22:15: error: cast to pointer from integer of different size [-Werror=int
 cc1: all warnings being treated as errors
 Compilation failed
 7b41b02
+Sat 26 Aug 2023 02:45:27 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createNode’:
+list.c:22:23: error: implicit declaration of function ‘caloc’; did you mean ‘calloc’? [-Werror=implicit-function-declaration]
+   22 |   Node *new = (Node *)caloc(sizeof(Node));
+      |                       ^~~~~
+      |                       calloc
+list.c:22:15: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   22 |   Node *new = (Node *)caloc(sizeof(Node));
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+c313459
