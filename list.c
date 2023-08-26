@@ -19,7 +19,7 @@ struct List {
 typedef struct List List;
 
 Node *createNode(void *data) {
-  Node *new = (Node *)mallloc(sizeof(Node));
+  Node *new = (Node *)malloc(sizeof(Node));
   assert(new != NULL);
   new->data = data;
   new->prev = NULL;
