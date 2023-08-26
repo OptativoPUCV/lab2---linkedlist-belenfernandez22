@@ -149,3 +149,26 @@ list.c:61:8: error: statement with no effect [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 e4c8954
+Sat 26 Aug 2023 02:38:33 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:54:8: error: expected ‘(’ before ‘list’
+   54 |     if list == NULL || list->current == NULL || list->current->next == NULL {
+      |        ^~~~
+      |        (
+list.c:54:8: error: statement with no effect [-Werror=unused-value]
+   54 |     if list == NULL || list->current == NULL || list->current->next == NULL {
+      |        ^~~~
+list.c: In function ‘lastList’:
+list.c:61:8: error: expected ‘(’ before ‘list’
+   61 |     if list == NULL || list->tail == NULL {
+      |        ^~~~
+      |        (
+list.c:61:8: error: statement with no effect [-Werror=unused-value]
+   61 |     if list == NULL || list->tail == NULL {
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+53ca3a1
