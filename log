@@ -103,3 +103,26 @@ Fri 25 Aug 2023 01:22:58 AM UTC:
  tests:  12|0
 total_score: 70/70
 0f36b11
+Sat 26 Aug 2023 02:37:54 AM UTC: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:54:8: error: expected ‘(’ before ‘list’
+   54 |     if list == NULL || list->current == NULL || list->current->next == NULL {
+      |        ^~~~
+      |        (
+list.c:54:8: error: statement with no effect [-Werror=unused-value]
+   54 |     if list == NULL || list->current == NULL || list->current->next == NULL {
+      |        ^~~~
+list.c: In function ‘lastList’:
+list.c:61:8: error: expected ‘(’ before ‘list’
+   61 |     if list == NULL {
+      |        ^~~~
+      |        (
+list.c:61:8: error: statement with no effect [-Werror=unused-value]
+   61 |     if list == NULL {
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+66a9c3f

@@ -40,6 +40,7 @@ List * createList() {
 
     return newList;
 }
+
 void * firstList(List * list) {
     if (list == NULL || list->head == NULL) {
         return NULL;
@@ -50,15 +51,15 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if (list == NULL || list->current == NULL || list->current->next == NULL) {
+    if list == NULL || list->current == NULL || list->current->next == NULL {
         return NULL;
     }
-
     list->current = list->current->next;
     return list->current->data;
 }
 void * lastList(List * list) {
-    if (list == NULL || list->tail == NULL) {
+    if list == NULL { 
+    if list->tail == NULL
         return NULL;
     }
 
@@ -144,9 +145,6 @@ void * popCurrent(List * list) {
 
     return data;
 }
-
-
-
 void cleanList(List * list) {
     while (list->head != NULL) {
         popFront(list);
