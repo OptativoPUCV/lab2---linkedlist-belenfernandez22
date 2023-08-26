@@ -26,21 +26,20 @@ Node *createNode(void *data) {
   new->next = NULL;
   return new;
 }
-
+//retorna el puntero del tipo de dato 
+// recordar memoria
 List * createList() {
     List * newList = (List *)malloc(sizeof(List));
     if (newList == NULL) {
         fprintf(stderr, "Error: Failed to allocate memory for List.\n");
         exit(EXIT_FAILURE);
     }
-
     newList->head = NULL;
     newList->tail = NULL;
     newList->current = NULL;
-
     return newList;
 }
-
+//retorna el dato del primer nodo de la lista
 void * firstList(List * list) {
     if (list == NULL || list->head == NULL) {
         return NULL;
@@ -49,7 +48,7 @@ void * firstList(List * list) {
     list->current = list->head;
     return list->current->data;
 }
-
+//actualiza el current para que apunte a ese nodo
 void * nextList(List * list) {
     if (list == NULL || list->current == NULL || list->current->next == NULL) {
         return NULL;
@@ -94,6 +93,7 @@ void pushBack(List * list, void * data) {
     list->current = list->tail;
     pushCurrent(list,data);
 }
+//agrega un dato a continuación del nodo
 void pushCurrent(List * list, void * data) {
     if (list->current == NULL) {
         fprintf(stderr, "Error: Current node is NULL.\n");
@@ -124,7 +124,8 @@ void * popBack(List * list) {
     list->current = list->tail;
     return popCurrent(list);
 }
-
+//limina el nodo que está en la posición del current de la lista enlazada, y además retorna el dato del nodo eliminado.
+//revisar 
 void * popCurrent(List * list) {
     if (!list || !list->current) {
         fprintf(stderr, "Error: Current node is NULL.\n");
@@ -145,6 +146,7 @@ void * popCurrent(List * list) {
 
     return data;
 }
+//current debe quedar apuntando al nodo siguiente del eliminado
 void cleanList(List * list) {
     while (list->head != NULL) {
         popFront(list);
